@@ -3,11 +3,11 @@ import React, { Component } from 'react';
 export default class Filter extends Component {
   render() {
     return (
-        <div>
-            <div className='filter-results'>{this.props.count}</div>
+        <div className="filter">
+            <div className='filter-results'>{this.props.count} Products</div>
             <div className='filter-sort'> 
-            {" "}
-            Order <select>
+            Order 
+            <select value={this.props.size} onChange={this.props.sortPrducts}>
                 <option>Latest</option>
                 <option value="lowest">Lowest</option>
                 <option value="highest">Highest</option>
@@ -15,7 +15,7 @@ export default class Filter extends Component {
             </div>
             <div className='filter-size'> 
             Filter
-                <select>
+                <select value={this.props.size} onChange={this.props.fiterProducts}>
                     <option value="ALL">ALL</option>
                     <option value="XS">XS</option>
                     <option value="S">S</option>
