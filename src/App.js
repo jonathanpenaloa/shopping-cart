@@ -21,7 +21,6 @@ class App extends React.Component {
     console.log(event.target.value);
   }
 
-
   render(){
   return (
     <div className="grid-container">
@@ -36,7 +35,6 @@ class App extends React.Component {
             sort={this.state.sort}
             filterProducts={this.filterProducts.length}
             softProducts={this.softProducts}
-            
             ></Filter>
             <Products products={this.state.products}></Products>
           </div>
